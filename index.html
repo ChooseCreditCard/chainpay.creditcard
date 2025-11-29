@@ -4,266 +4,268 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>ChainPay.Creditcard – On-Chain, Off-Chain & Card Payment Rails</title>
-  <meta name="description"
-        content="ChainPay.creditcard explains how value moves across chains and card rails: from wallets and exchanges to processors, networks and issuers." />
+  <title>ChainPay.Creditcard – Blockchain-Powered Card Payments Explained</title>
+  <meta name="description" content="Understand how blockchain-based payment rails connect to credit cards: on-ramp/off-ramp flows, stablecoins, settlement models and risks. Independent explainer of chain-based card payments." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://chainpay.creditcard/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ChainPay.Creditcard – On-Chain, Off-Chain & Card Payment Rails" />
-  <meta property="og:description"
-        content="How crypto wallets, exchanges and card issuers connect – from on-chain value to off-chain card payments." />
+  <meta property="og:title" content="ChainPay.Creditcard – Blockchain-Powered Card Payments Explained" />
+  <meta property="og:description" content="Learn how “on-chain” balances, stablecoins and tokenised funds are converted into traditional card payments at the point of sale." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://chainpay.creditcard/" />
-  <meta property="og:image" content="https://chainpay.creditcard/preview.png" />
+  <meta property="og:image" content="https://choose.creditcard/preview.png?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=og_image" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/styles.css" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ChainPay.Creditcard – Blockchain & Card Payments" />
+  <meta name="twitter:description" content="Independent explanation of how blockchain rails, stablecoins and tokenised balances plug into card networks and merchant terminals." />
+  <meta name="twitter:image" content="https://choose.creditcard/preview.png?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=twitter_image" />
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FE63JQ3H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config','G-64FE63JQ3H');
+    gtag('config', 'G-64FE63JQ3H');
   </script>
+
+  <!-- Tailwind for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your shared minisite styles -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body class="bg-slate-950 text-slate-100">
-
-  <!-- HEADER – unified CC -->
   <header class="site-header">
     <div class="nav-inner max-w-6xl">
       <div class="brand">
         <div class="cc-logo">CC</div>
         <div class="brand-text">
-          <span class="brand-title">ChainPay.creditcard</span>
-          <span class="brand-subtitle">On-chain · Off-chain · Rails</span>
+          <div class="brand-title">ChainPay.Creditcard</div>
+          <div class="brand-subtitle">Blockchain-Powered Card Payments</div>
         </div>
       </div>
-
-      <nav class="nav-links">
-        <a href="https://fin.creditcard/?utm_source=chainpay.creditcard&utm_medium=nav&utm_campaign=collection">
-          Collection
-        </a>
-        <a href="https://tech.creditcard/?utm_source=chainpay.creditcard&utm_medium=nav&utm_campaign=tech">
-          Tech
-        </a>
-        <a href="https://cryptopay.creditcard/?utm_source=chainpay.creditcard&utm_medium=nav&utm_campaign=cryptopay">
-          CryptoPay
-        </a>
-        <a href="https://choose.creditcard/?utm_source=chainpay.creditcard&utm_medium=nav&utm_campaign=choose">
-          Choose
-        </a>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#mechanics">How It Works</a>
+        <a href="#compare">Compare</a>
       </nav>
     </div>
   </header>
 
   <main class="cc-page">
+    <!-- Breadcrumb -->
+    <div class="cc-breadcrumb">
+      <a href="https://choose.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=breadcrumb">Home</a>
+      &nbsp;›&nbsp;
+      ChainPay.Creditcard
+    </div>
 
-    <p class="cc-breadcrumb">ChainPay.creditcard · On-chain · Off-chain · Payment rails</p>
-
-    <!-- HERO -->
+    <!-- Hero -->
     <section class="hero">
-      <h1>How Value Flows Across Chains &amp; Card Rails</h1>
-      <p class="hero-lead">
-        From wallets and exchanges to processors, networks and issuers – how “chain payments” actually move.
-      </p>
-      <a class="cta"
-         href="https://choose.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=chainpay_top">
-        Compare Crypto &amp; Digital-Friendly Cards
-      </a>
-    </section>
-
-    <!-- What is ChainPay -->
-    <section class="section">
-      <h2>What is a “chain payment” in card terms?</h2>
-      <p class="small">
-        A chain payment is any flow where the value starts in one system (for example a blockchain, wallet,
-        exchange or alternative rail) and ends up as a standard card transaction on Visa/Mastercard rails.
-      </p>
-      <ul class="list">
-        <li>Crypto and stablecoin wallets that issue cards</li>
-        <li>Exchanges that offer “spend your balance” cards</li>
-        <li>Fintechs that bridge bank accounts, wallets and cards</li>
-        <li>Token-based loyalty that settles through card rails</li>
-      </ul>
-    </section>
-
-    <!-- High-level flow -->
-    <section class="section">
-      <h2>End-to-end chain → card flow</h2>
-      <div class="cluster-grid">
-        <div class="cluster-card">
-          <h3>1. Value on chain</h3>
-          <p class="small">
-            You hold BTC, ETH, stablecoins or tokenized balance in a wallet, exchange or app.
-          </p>
-        </div>
-        <div class="cluster-card">
-          <h3>2. Conversion or pre-funding</h3>
-          <p class="small">
-            Provider converts assets to fiat instantly at spend time, or pre-loads a fiat balance behind the card.
-          </p>
-        </div>
-        <div class="cluster-card">
-          <h3>3. Card rails</h3>
-          <p class="small">
-            The transaction runs on the usual four-party model: terminal → acquirer → network → issuer.
-          </p>
-        </div>
-        <div class="cluster-card">
-          <h3>4. Settlement &amp; fees</h3>
-          <p class="small">
-            Merchant receives local currency; your on-chain or wallet balance is reduced, including spread and fees.
-          </p>
-        </div>
+      <div class="hero-content">
+        <h1>How Blockchain Rails Connect to Everyday Card Payments</h1>
+        <p class="hero-lead">
+          ChainPay.Creditcard explains what happens when a “blockchain payment card” is used at a normal terminal:
+          how on-chain balances are bridged to fiat, where stablecoins fit in, and which parts still run on traditional card rails.
+        </p>
+        <a class="cta" href="https://choose.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=hero_cta">
+          Compare crypto & Web3 card programmes
+        </a>
       </div>
     </section>
 
-    <!-- Actors in the chain -->
+    <!-- Content sections -->
+    <section id="overview" class="section">
+      <h2>What Is a Chain-Based Payment Card?</h2>
+      <p>
+        A chain-based payment card links a standard network card to a wallet, exchange or on-chain balance. Instead of
+        drawing funds from a bank account, the programme monitors assets on one or more blockchains and uses those assets
+        to fund fiat settlements when the card is used.
+      </p>
+      <p>
+        On the merchant side, nothing special is required: the terminal sends a normal card authorisation. All blockchain
+        interaction happens on the issuer or partner platform, which manages wallets, conversions and settlement flows in
+        the background.
+      </p>
+    </section>
+
+    <section id="mechanics" class="section">
+      <h2>How Funds Move From Chain to Card Network</h2>
+      <p>
+        When you pay with a ChainPay-style card, the issuer or programme operator first checks a linked wallet or
+        off-chain ledger that tracks your on-chain assets. Depending on the setup, it may:
+      </p>
+      <p>
+        • lock a portion of your balance,  
+        • convert stablecoins or tokens into fiat at a partner exchange, or  
+        • draw on a prefunded fiat pool that is periodically rebalanced from blockchain holdings.
+      </p>
+      <p>
+        The card network only sees a fiat authorisation request. The bridge between chain and card rails is handled by
+        the programme’s internal treasury and settlement logic.
+      </p>
+    </section>
+
     <section class="section">
-      <h2>Who sits where in the payment chain?</h2>
+      <h2>Stablecoins, Layers and “On-Chain” Marketing Claims</h2>
+      <p>
+        Many products advertised as “on-chain cards” actually rely heavily on stablecoins and internal ledgers. Assets
+        may move on a public blockchain at deposit and withdrawal, but day-to-day card spend is usually netted and
+        settled off-chain to keep costs predictable.
+      </p>
+      <p>
+        Layer 2 networks and sidechains can be used to reduce fees or increase speed, but from a cardholder perspective
+        the critical questions are the same: who is the counterparty, how is value preserved, and at which points are
+        you exposed to volatility or protocol risk.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Fees, Spreads and Bridge Risks</h2>
+      <p>
+        Chain-based cards introduce an extra bridge between assets and spending currency. Each bridge can involve spreads,
+        network fees and service charges that sit on top of any standard card fees and FX margins.
+      </p>
+      <p>
+        To understand the real cost of a ChainPay-style programme, look at:  
+        • deposit and withdrawal fees for moving funds on- and off-chain,  
+        • conversion spreads when exchanging tokens or stablecoins, and  
+        • card-level fees such as FX margins, ATM charges and inactivity fees.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Regulation, Safeguarding and Tax Considerations</h2>
+      <p>
+        Depending on jurisdiction, the entity operating the on/off-ramp may need authorisations as an e-money issuer,
+        payment institution or crypto-asset service provider. The degree of safeguarding, segregation of client funds and
+        complaint handling processes can vary widely.
+      </p>
+      <p>
+        From a tax perspective, converting tokens or stablecoins into fiat may trigger disposals. Using a chain-linked
+        card for everyday purchases can generate a large volume of small events, which makes exportable histories and
+        robust reporting tools important if you plan to rely on this for regular spending.
+      </p>
+    </section>
+
+    <!-- Comparison block -->
+    <section id="compare" class="section">
+      <h2>Comparing Chain-Based Card Programmes</h2>
       <div class="table-wrap">
         <table class="table">
           <thead>
-          <tr>
-            <th>Actor</th>
-            <th>Role in chain</th>
-            <th>Typical risks</th>
-          </tr>
+            <tr>
+              <th>Feature</th>
+              <th>What to Look For</th>
+              <th>Why It Matters</th>
+            </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Wallet / exchange</td>
-            <td>Holds your assets, triggers conversion and issues or powers the card.</td>
-            <td>Custody, hacks, regulatory changes, solvency.</td>
-          </tr>
-          <tr>
-            <td>Programme manager / issuer</td>
-            <td>Issues the card, sets limits, handles disputes and KYC.</td>
-            <td>Credit risk, compliance, chargebacks.</td>
-          </tr>
-          <tr>
-            <td>Processor / acquirer</td>
-            <td>Connects merchants and terminals to the card networks.</td>
-            <td>Tech outages, routing choices, fee structure.</td>
-          </tr>
-          <tr>
-            <td>Network (Visa / Mastercard)</td>
-            <td>Routes authorisations and clearing between bank sides.</td>
-            <td>Global rules, scheme fees, brand rules.</td>
-          </tr>
-          <tr>
-            <td>Merchant &amp; terminal</td>
-            <td>Accepts the payment; sees only fiat transaction data.</td>
-            <td>Terminal configuration, acceptance, local restrictions.</td>
-          </tr>
+            <tr>
+              <td>Asset Support</td>
+              <td>Range of chains, tokens and stablecoins</td>
+              <td>Determines how flexible the programme is for your current holdings.</td>
+            </tr>
+            <tr>
+              <td>Bridge Model</td>
+              <td>Direct conversion, prefunding or internal ledger</td>
+              <td>Influences latency, risk and how often assets are actually moved on-chain.</td>
+            </tr>
+            <tr>
+              <td>Fee Transparency</td>
+              <td>Clear breakdown of spreads, network fees and card fees</td>
+              <td>Helps you see the full cost of turning on-chain value into spendable fiat.</td>
+            </tr>
+            <tr>
+              <td>Reporting Tools</td>
+              <td>CSV exports, API access, tax-friendly summaries</td>
+              <td>Makes it easier to manage accounting and regulatory obligations.</td>
+            </tr>
+            <tr>
+              <td>Legal &amp; Safeguarding Setup</td>
+              <td>Licensing, segregation of funds, risk disclosures</td>
+              <td>Signals how the programme is supervised and what happens in stress scenarios.</td>
+            </tr>
           </tbody>
         </table>
       </div>
-    </section>
-
-    <!-- Why the chain matters -->
-    <section class="section">
-      <h2>Why the chain matters for users</h2>
       <p class="small">
-        Understanding the full chain helps you choose better products and avoid surprises:
+        For broader comparisons of crypto-linked cards and traditional products, visit
+        <a href="https://choose.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=comparison_section">
+          Choose.Creditcard
+        </a>.
       </p>
-      <ul class="list">
-        <li>Fees and FX spreads may sit at the wallet, exchange, issuer or network level</li>
-        <li>Declines can come from risk engines at multiple hops in the chain</li>
-        <li>Chargeback and refund rules follow the card issuer – not the blockchain</li>
-        <li>Regional restrictions can block specific rails even if others work</li>
-        <li>Reward tokens or cashback may live on-chain while spend happens off-chain</li>
-      </ul>
-    </section>
-
-    <!-- Design patterns for chain payments -->
-    <section class="section">
-      <h2>Common ChainPay design patterns</h2>
-      <div class="cluster-grid">
-        <div class="cluster-card">
-          <h3>Auto-convert at spend</h3>
-          <p class="small">
-            Assets stay in crypto until the moment you tap; provider sells in real time per transaction.
-          </p>
-        </div>
-        <div class="cluster-card">
-          <h3>Pre-loaded fiat behind a card</h3>
-          <p class="small">
-            You convert manually into a fiat balance; card spends from that balance like a normal prepaid card.
-          </p>
-        </div>
-        <div class="cluster-card">
-          <h3>Stablecoin treasury + card</h3>
-          <p class="small">
-            Company or DAO holds stablecoins; card programme uses them as funding source for global spend.
-          </p>
-        </div>
-        <div class="cluster-card">
-          <h3>On-chain loyalty + off-chain spend</h3>
-          <p class="small">
-            Traditional card for payments, with rewards issued as tokens or on-chain points.
-          </p>
-        </div>
-      </div>
     </section>
 
     <!-- Cluster links -->
     <section class="section">
-      <h2>The crypto &amp; rails domain cluster</h2>
-      <p class="small">Explore related domains in The CreditCard Collection:</p>
+      <h2>Explore Related Crypto & Web3 Payment Topics</h2>
       <div class="cluster-grid">
-        <a class="cluster-card"
-           href="https://cryptopay.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=cryptopay">
-          <h3>CryptoPay.creditcard</h3>
-          <p class="small">Overview of crypto-to-card models, fees and limits.</p>
+        <a class="cluster-card" href="https://bitcoinpay.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=cluster_bitcoinpay">
+          <h3>BitcoinPay.Creditcard</h3>
+          <p>Bitcoin-focused card payments and settlement flows.</p>
         </a>
-        <a class="cluster-card"
-           href="https://bitpay.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=bitpay">
-          <h3>BitPay.creditcard</h3>
-          <p class="small">BTC and multi-asset cards, including stablecoins.</p>
+        <a class="cluster-card" href="https://btcpay.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=cluster_btcpay">
+          <h3>BTCPay.Creditcard</h3>
+          <p>Merchant-side BTC acceptance and gateway infrastructure.</p>
         </a>
-        <a class="cluster-card"
-           href="https://tokens.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=tokens">
-          <h3>Tokens.creditcard</h3>
-          <p class="small">Network tokens, device tokens and on-chain loyalty.</p>
+        <a class="cluster-card" href="https://tokens.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=cluster_tokens">
+          <h3>Tokens.Creditcard</h3>
+          <p>Tokenised rewards, governance tokens and incentive models.</p>
         </a>
-        <a class="cluster-card"
-           href="https://tech.creditcard/crypto?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=tech_crypto">
-          <h3>Tech.Creditcard / Crypto rails</h3>
-          <p class="small">Technical deep dive into tokenization and on-chain issuing.</p>
+        <a class="cluster-card" href="https://defipay.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=cluster_defipay">
+          <h3>DefiPay.Creditcard</h3>
+          <p>DeFi-linked card products and yield-routing strategies.</p>
+        </a>
+        <a class="cluster-card" href="https://virtualpay.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=cluster_virtualpay">
+          <h3>VirtualPay.Creditcard</h3>
+          <p>Virtual cards and wallet-based payment flows.</p>
         </a>
       </div>
     </section>
 
-    <!-- CTA bottom -->
+    <!-- Collection section -->
     <section class="section">
-      <h2>Choosing the right chain-aware card</h2>
+      <h2>Part of The CreditCard Collection</h2>
       <p class="small">
-        ChainPay.creditcard explains how value flows across chains and rails.<br />
-        To compare real cards on regions, fees, rewards and crypto features:
+        ChainPay.Creditcard is one spoke in <strong>The CreditCard Collection</strong> — a network of focused microsites operated by ronarn AS. Each site covers one concept in the card and payments stack and then connects you to independent comparison tools.
       </p>
-      <a class="cta"
-         href="https://choose.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=chainpay_bottom">
-        Open Compare on Choose.Creditcard
-      </a>
+      <p class="small">
+        This page concentrates on blockchain-based payment rails and their connection to everyday card usage. It does not
+        issue cards or provide investment or tax advice; instead, it restates how these products typically work according
+        to provider documentation.
+      </p>
+
+      <!-- Crypto & Web3 hub snippet -->
+      <div class="hub-link">
+        <a href="https://choose.creditcard/crypto/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=minisite_to_hub"
+           class="text-sm text-slate-600 hover:text-slate-900">
+          Learn more at the Crypto &amp; Web3 hub
+        </a>
+      </div>
     </section>
 
+    <!-- Bottom CTA -->
+    <section class="section">
+      <h2>Ready to Compare Chain-Linked and Traditional Cards?</h2>
+      <p class="small">
+        Use ChainPay.Creditcard to understand how blockchain rails plug into card networks — then go to the main hub to
+        compare crypto-linked cards with conventional travel, cashback and rewards products.
+      </p>
+      <a class="cta" href="https://choose.creditcard/?utm_source=chainpay.creditcard&utm_medium=referral&utm_campaign=bottom_cta">
+        Go to Choose.Creditcard
+      </a>
+    </section>
   </main>
 
-  <!-- MINI FOOTER -->
   <footer class="mini-footer">
-    <p class="mini-footer-main">
-      © 2025 The CreditCard Collection — ronarn AS
-    </p>
+    <p class="mini-footer-main">© 2025 The CreditCard Collection — ronarn AS</p>
     <p class="mini-footer-contact">
       Contact: <a href="mailto:support@cc.creditcard">support@cc.creditcard</a>
     </p>
   </footer>
-
 </body>
 </html>
